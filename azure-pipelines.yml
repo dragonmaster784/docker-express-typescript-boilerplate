@@ -27,3 +27,13 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
         tags: |
           $(tag)
+    - task: AzureRmWebAppDeployment@4
+      inputs:
+        ConnectionType: 'AzureRM'
+        appType: 'webAppContainer'
+        WebAppName: 'maholla-staging'
+        DockerNamespace: 'https://hub.docker.com/repository/docker/maholla/api'
+        DockerRepository: 'maholla/api'
+        DockerImageTag: 'latest'
+        StartupCommand: 'docker-compose up'
+        
