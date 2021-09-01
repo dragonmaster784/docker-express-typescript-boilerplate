@@ -4,7 +4,7 @@
   "description": "A minimalist TypeScript-Express boilerplate",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sidhantpanda/express-typescript-boilerplate.git"
+    "url": "git+https://github.com/dragonmaster784/express-typescript-boilerplate.git"
   },
   "keywords": [
     "TypeScript",
@@ -13,7 +13,7 @@
     "boilerplate",
     "eslint"
   ],
-  "author": "Sidhant Panda",
+  "author": "Ryan de Kwaadsteniet",
   "main": "dist/index.js",
   "scripts": {
     "eslint": "eslint src/server.ts",
@@ -61,9 +61,6 @@
     "ts-node": "10.1.0",
     "typescript": "4.3.5"
   },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sidhantpanda/docker-express-typescript-boilerplate/issues"
-  },
-  "homepage": "https://github.com/sidhantpanda/docker-express-typescript-boilerplate#readme"
+  "license": "Proprietary",
+  "homepage": "https://maholla.com"
 }

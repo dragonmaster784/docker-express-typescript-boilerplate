@@ -1,12 +1,12 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "API Service",
+    "title": "Maholla API Service",
     "version": "1.0.0",
     "description": "API Service endpoints",
     "contact": {
-      "email": "sidhant@panda.fyi",
-      "name": "Sidhant Panda"
+      "email": "dev@maholla.com",
+      "name": "Ryan de KWaadsteniet"
     }
   },
   "servers": [

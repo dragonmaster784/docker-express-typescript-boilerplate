@@ -28,8 +28,8 @@ function logResponseTime(req: Request, res: Response, next: NextFunction) {
 app.use(logResponseTime);
 
 app.use(compression());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: 31557600000 }));
 
