@@ -1,11 +1,11 @@
 version: "3"
 
 services:
-  api-server:
+  api:
     build:
       context: .
-    container_name: api-server
-    image: api-server
+    container_name: maholla/api
+    image: maholla/api
     restart: unless-stopped
     environment:
       - NODE_ENV=production

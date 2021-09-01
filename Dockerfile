@@ -29,22 +29,7 @@ RUN apt-get install -qy \
     libtbb2 libtbb-dev libdc1394-22-dev
 
 # Install OpenCV
-RUN wget -O opencv.zip https://github.com/opencv/opencv/archive/${OPENCV_VERSION}.zip \
-    && wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/${OPENCV_VERSION}.zip \
-    && unzip opencv.zip && unzip opencv_contrib.zip \
-    && mv opencv-${OPENCV_VERSION} opencv && mv opencv_contrib-${OPENCV_VERSION} opencv_contrib \
-    && cd opencv \
-    && mkdir build && cd build \
-    && cmake -D CMAKE_BUILD_TYPE=RELEASE \
-    -D CMAKE_INSTALL_PREFIX=/usr/local \
-    -D BUILD_TESTS=OFF \
-    -D BUILD_PERF_TESTS=OFF \
-    -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules \
-    -D PYTHON_EXECUTABLE=$(which python3.9) \
-    -D PYTHON_INCLUDE_DIR=$(python3.9 -c "from distutils.sysconfig import get_python_inc; print(get_python_inc())") \
-    -D PYTHON_PACKAGES_PATH=$(python3.9 -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())") \
-    .. \
-    && make install 
+RUN apt-get install python-opencv -y
 
 # Clean up
 RUN apt-get autoremove -y \
